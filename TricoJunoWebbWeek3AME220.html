@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trico</title>
+    <style>
+        /* Basic Page Styling */
+        body {
+            background-color: black;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* the first big box*/
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            background-color: green;
+            border-radius: 20px 20px 0 0;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav {
+            background-color: green;
+            width: 99%;
+            display: flex;
+            justify-content: space-around;
+            padding: 5px;
+            border-radius: 20px 20px 0 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        /* le button */
+        a button {
+            background-color: black;
+            color: #aaa;
+            width: 160px;
+            height: 50px;
+            border-radius: 10px;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border: 2px solid #7ed957;
+            font-size: 12px;
+            transition: 0.2s ease;
+        }
+
+        a:hover button { /* a pleasing effect when you hover on the buttons*/
+            font-style: italic;
+            letter-spacing: 2px;
+            background-color: #7ed957;
+            color: black;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        /* the title */
+        #trico{
+            font-size: 64px;
+            font-style: italic;
+            font-weight: 800;
+            color: black;
+            margin: 20px 0;
+        }
+
+        /* image of my son, Trico */
+        #cat-picture {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 20px solid black;
+            border-style: double;
+            margin: 20px 0;
+        }
+
+        /* the content box that holds the sections and divs */
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #7ed957;
+            color: black;
+            padding: 15px;
+            border-radius: 0px;
+            width: 97%;
+        }
+
+        #about, #theOwner, #brother {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            border-radius: 20px;
+            margin: 10px 0;
+            width: 90%;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        /* trait is parent, traitbox is child*/
+        .trait{
+            display: flex;
+            justify-content: space-between;
+            background-color: #7ed957;
+            border: 2px solid green;
+            border-radius: 15px;
+            padding: 10px;
+            margin-top: 15px;
+        }
+
+        .traitbox{
+            background-color: black;
+            border: 2px solid green;
+            border-radius: 10px;
+            padding: 10px;
+            width: 45%;
+            margin: 5px;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+        }
+
+        /* first letter styling 
+        (thank you, Professor Ishrat, for teaching that in the lecture btw)*/
+        #about::first-letter {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 48px;
+            font-weight: 800;
+            font-style: italic;
+        }
+
+        #theOwner::first-letter {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 48px;
+            font-weight: 800;
+            font-style: italic;
+        }
+
+        #brother::first-letter {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 48px;
+            font-weight: 800;
+            font-style: italic;
+        }
+
+        /* responsive part, 500px and less makes it respond*/
+        @media only screen and (max-width: 500px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+                
+            }
+
+            a button {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .trait{
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .traitbox {
+                width: 70%;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        
+
+        <nav id="navigation">
+            <a href="#about"><button>About Him</button></a>
+            <a href="#theOwner"><button>About His Owner</button></a>
+            <a href="#brother"><button>Learn About His Brother</button></a>
+        </nav>
+
+        <img src="trico.jpg" id="cat-picture" alt="Picture of Trico">
+
+        <section class="content">
+            <header id="trico">Trico: the Friendly Menace</header>
+
+            <section id="about">
+                <h2>About Trico</h2>
+                This fluffy boy loved almost everyone because he saw them as an opportunity to gain affection and food.
+                He was exceptional at hunting and torturing small rodents, and his favorite thing to do was to leave their intact hearts on my doorstep.
+                He was taken away from me years ago (it's a long story), but I still have hundreds of pictures of him and his orange (crazy) brother, Milo.
+                I miss them both dearly every day.             
+            </section>
+
+            <section id="theOwner">
+                <h2>About His Owner</h2>
+                His owner, me, received Trico and Milo when I was 14ish years old. 
+                They were birthed by the renowned cat named "Porch Cat" who belonged to my older sister.
+                My little buddies and I made countless memories together for the 4 years I had them.
+                They always greeted me by jumping on my car when I came home from school.
+                They were quirky cats, but what cat isn't, really.
+            </section>
+
+            
+            <div class="trait">
+                <div class="traitbox">Fluffy</div>
+                <div class="traitbox">'Eepy 24/7</div>
+                <div class="traitbox">Brain-cell-less</div>
+                <div class="traitbox">Affectionate</div>
+            </div>
+
+            <section id="brother" style="margin-top: 25px;">
+                <h2>Learn About His Brother</h2>
+                For more about his brother, Milo, and access to the sacred library of cat photos, contact this email:  <em>snwebb5@asu.edu</em> 
+            </section>
+        </section>
+    </section>
+</body>
+</html>
